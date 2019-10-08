@@ -3,7 +3,7 @@
 Boilerplate for making your own SDK in Python
 
 ## Install
-> $ pipenv install "git+https://github.com/hshaosf/boilerplate-sdk-py.git@master#egg=boilerplate-sdk"
+> $ pipenv install "git+https://github.com/SFDigitalServices/boilerplate-sdk-py.git@master#egg=boilerplate-sdk"
 
 ## Example usage
 > from boilerplate_sdk.example import Example
@@ -21,6 +21,13 @@ Start up example app
 
 Run test for example app
 > pipenv run python -m pytest examples/ --cov=examples/ --cov-report term-missing
+
+## Generate Documentation
+with Pdoc
+> (cd docs/pdoc && pipenv run python -m pdoc --html ../../boilerplate_sdk/sdk.py)
+
+with Sphinx
+> (cd docs/sphinx && pipenv run make html)
 
 
 
